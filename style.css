@@ -1,0 +1,682 @@
+*{
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: none;
+    box-sizing: border-box;
+}
+
+#wrapper{
+    height: auto;
+    height: 100%;
+    margin: 0 auto;
+}
+
+body{
+    height: 100%;
+    background: whitesmoke;
+    overflow-x: hidden;
+    max-width: 100%;
+}
+a{
+    text-decoration: none;
+    color: white;
+}
+
+/* HEADER SECTION */
+
+#headerm{ /* hiding mobile header */
+    display: none;
+}
+.hamburger{ /* hiding mobile hamburger menu */
+    display: none;
+}
+
+header{
+    position: sticky;
+    top: 0px; /* needs this for sticky to work on scroll */
+    display: flex;
+    font-size: 1.4rem; /* this dictates how big the boxes for the rows are */ /* !!!!!make it smaller for the laptop/mobile media query (1.3 rem for desktop, 1.2rem for laptop(90%zoom))*/
+    font-family: Roboto;
+    color: whitesmoke;
+    background-color: white;
+    align-items: flex-end;
+}
+.fa-user{
+    position: absolute;
+    right: 3%;
+    top: 67%;
+}
+#logged_in{
+    position: absolute; 
+    top: 0;
+    left: 0; 
+    right: 0; 
+    margin-left: auto; 
+    margin-right: auto; 
+    width: 600px;
+    color: black;
+}
+
+span{
+    word-spacing: 10px; /* making space between two compound words smaller (ex. Ukrainian Crisis) */
+}
+
+#logo{
+    width: 150px;
+    height: 100px;
+    left: 0%;
+}
+
+.row{
+    background-color: #214684;
+    flex: 1; /* extends it to the end of right side */
+    word-spacing: 50px;
+    height: 3rem; /* was 5rem */
+    max-height: 100%;
+    overflow-x: hidden;
+    width: 100%;
+    padding-top: 1vh;
+    text-align: center;
+}
+
+
+
+/* MAIN SECTION (BUILDING + FACULTIES) */
+
+#building{
+    display: flex;
+    height: 100%;
+    width: 100%;
+}
+
+#faculties{
+    display: flex;
+    gap: 5%;
+    justify-content: space-evenly;
+    margin-left: 60px;
+    margin-right: 60px;
+    padding-top: 30px;
+    font-size: 100%;
+}
+
+.facultiesm{
+    display: none;
+}
+
+.f_img{
+    width: 100%;
+    height: 100%;
+}
+
+/* FACULTY PAGE */
+.FacultyCon{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.Faculty{
+    width: 32em;
+    height: 20em;
+    margin-top: 7em;
+    background-color: #214684;
+    text-align: center;
+}
+.f_text{
+    margin-left: 7%;
+    margin-right: 7%;
+    margin-top: 15%;
+    font-size: 1.7em;
+}
+
+.Faculty_Icons{
+    display: inline-block; /* makes clickable link as big as img */
+    flex-direction: column;
+    width: 10%;
+}
+.icon{
+    width: 80%;
+    text-align: center;
+}
+.Container{
+    margin-top: 10em;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    text-align: center;
+}
+.fac_img{
+    width: 500px;
+    height: 275px;
+}
+
+
+/* EVENTS */
+.section_title{ /* is shared with news section */
+    text-align: center;
+    margin-top: 10rem;
+    margin-bottom: 2rem;
+    font-size: 2.5rem;
+}
+#events{
+    display: flex;
+    justify-content: center;
+    gap: 5rem;
+}
+#EventCon{
+    display: flex;
+    justify-content: center;
+    gap: 5rem;
+    background-color: #214684;
+    padding: 2.4rem;
+    color: white;
+}
+.event_img{
+    width: 25rem;
+    height: 20rem;
+}
+.event_title{
+    font-size: 1.35em;
+}
+.event_desc{
+    font-size: 1.3em;
+    margin-left: 20px;
+}
+#All{
+    text-align: center;
+    margin-top: 3rem;
+}
+
+/* NEWS */
+
+#NewsCon{
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+.news_con{
+    background-color: white;
+    max-width: 20vw;
+    min-height: 35vh;
+    /* overflow-x: hidden; /* makes a scroll bar if text is too big, not needed anymore, fixed with "min-height: 35vh" (instead of max-height) */
+}
+.news_title{
+    margin: 15px;
+    font-size: 20px;
+}
+.news_desc{
+    background-color: white;
+    padding: 15px;
+    font-size: 1.15em;
+}
+/* FOOTER */
+
+footer{
+    margin-top: 5rem;
+    padding-top: 5em;
+    padding-bottom: 4em;
+    background-color: #214684;
+    text-align: center;
+    color: white;
+}
+  
+    /* LAPTOPS*/
+  
+    @media (min-width: 1201px) and (max-width: 1430px) {
+        header{
+            font-size: 1.3vw;
+            justify-content: center;
+        }
+        .row{
+            word-spacing: 40px;
+            text-align: center;
+            padding-top: 1.8vh;
+            align-items: center;
+        }
+    
+        #faculties{
+            font-size: 70%;
+        }
+    
+        #events{
+            display: flex;
+            justify-content: center;
+            gap: 5rem;
+        }
+        #EventCon{
+            display: flex;
+            justify-content: center;
+            gap: 5rem;
+            background-color: #214684;
+        }
+        .event_img{
+            width: 25rem;
+            height: 20rem;
+        }
+        .event_title{
+            font-size: 1.25em;
+        }
+        .event_desc{
+            font-size: 1em;
+        }
+      }
+  
+  /* LAPTOPS*/
+  
+  @media (min-width: 801px) and (max-width: 1200px) {
+    header{
+        font-size: 1.4vw;
+        justify-content: center;
+    }
+    .row{
+        word-spacing: 40px;
+        text-align: center;
+        padding-top: 1.5%;
+        align-items: center;
+    }
+
+    #faculties{
+        font-size: 55%;
+    }
+
+    #events{
+        display: flex;
+        justify-content: center;
+        gap: 5rem;
+    }
+    #EventCon{
+        display: flex;
+        justify-content: center;
+        gap: 5rem;
+        background-color: #214684;
+        padding: 3rem;
+    }
+    .event_img{
+        width: 20rem;
+        height: 15rem;
+    }
+    .event_title{
+        font-size: 1.15em;
+    }
+    .event_desc{
+        font-size: 1em;
+    }
+
+    /* FACULTIES */
+    .f_text{
+        font-size: 130%;
+    }
+
+  }
+
+  
+/* MOBILE (DIFFERENT LAYOUT ==>menu) */
+
+  @media (min-width: 650px) and (max-width: 800px) {
+    header{
+        display: none;
+    }
+    #headerm{
+        display: flex;
+        justify-content: center;
+    }
+    #logom{
+        width: 20rem;
+        height: 10rem;
+    }
+    
+    .bar{
+        display: block;
+        width: 25px;
+        height: 3px;
+        margin: 5px auto;
+        transition: 0.5s ease-in-out;
+        background-color: black;
+    }
+    .hamburger{
+        display: block;
+        position: absolute;
+        left: 10%;
+        top: 4rem;
+        z-index: 99;
+    }
+    .hamburger.active .bar:nth-child(2){ /* animation that makes it an x */
+        opacity: 0;
+    }
+    .hamburger.active .bar:nth-child(1){ /* animation that makes it an x */
+        transform: translateY(8px) rotate(45deg);
+        background-color: white;
+    }
+    .hamburger.active .bar:nth-child(3){ /* animation that makes it an x */
+        transform: translateY(-8px) rotate(-45deg);
+        background-color: white;
+    }
+        .nav-menu{
+        display: none;
+        position: absolute;
+        margin: 0;
+        top: 11%;
+        gap: 0;
+        flex-direction: column;
+        background-color: black;
+        opacity: 70%;
+        width: 80%;
+        height: 100vh;
+    }
+    .nav-link{
+        color: white;
+    }
+    .nav-item{
+        margin: auto;
+        width: 80%;
+        border-top: 1px solid white;
+        border-bottom: 1px solid white;
+    }
+    .nav-menu.active{
+        display: flex;
+        left: 10%;
+        padding: 0;
+    }
+    ul{
+        padding-top: 15px;
+        display: flex;
+        flex-direction: column;
+        list-style: none;
+        margin: 30px;
+        gap: 55px;
+        flex-wrap: wrap;
+        font-size: 1.1rem;
+    }
+    li{
+        word-spacing: 50px;
+    }
+
+    /* MAIN */
+    
+    #faculties{
+        display: none;
+    }
+
+    .facultiesm{
+        display: flex;
+        flex-direction: row;
+        padding-top: 5rem;
+        text-align: center;
+        font-size: 12px;
+    }
+    .f_img{
+        width: 50%;
+    }
+
+
+    /* FACULTY PAGE */
+    .f_text{
+        font-size: 120%;
+    }
+
+
+    /* EVENTS */
+    
+    .section_title{ /* is shared with news section */
+        text-align: center;
+        margin-top: 8rem;
+        margin-bottom: 1rem;
+        font-size: 2.5rem;
+    }
+    #events{
+        display: flex;
+        justify-content: center;
+    }
+    #EventCon{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        background-color: gray;
+    }
+    .event_img{
+        width: 100%;
+        height: 25rem;
+    }
+    .event_title{
+        font-size: 1.25em;
+    }
+    .event_desc{
+        margin-top: 10px;
+        margin-left: 3em;
+        font-size: 1em;
+    }
+    #All{
+        text-align: center;
+        margin-top: 3rem;
+    }
+
+/* NEWS */
+
+#NewsCon{
+    display: flex;
+    flex-direction: column;
+    gap: 1.5em;
+    justify-content: center;
+    align-items: center;
+}
+.news_con{
+    max-width: 50vw;
+    min-height: 35vh;
+    /* overflow-x: hidden; /* makes a scroll bar if text is too big, not needed anymore, fixed with "min-height: 35vh" (instead of max-height) */
+}
+.news_title{
+    margin: 15px;
+    font-size: 20px;
+}
+.news_desc{
+    background-color: white;
+    padding: 15px;
+    font-size: 1.15em;
+}
+/* FOOTER */
+
+footer{
+    margin-top: 5rem;
+    padding-top: 5em;
+    padding-bottom: 4em;
+    background-color: #214684;
+    text-align: center;
+    color: white;
+}
+
+  }
+
+  
+
+  /* MOBILE (DIFFERENT LAYOUT ==>menu) */
+  /* making text/elements smaller for smaller screens */
+  @media (width < 650px) {
+    header{
+        display: none;
+    }
+    #headerm{
+        display: flex;
+        justify-content: center;
+    }
+    #logom{
+        width: 20rem;
+        height: 10rem;
+    }
+    
+    .bar{
+        display: block;
+        width: 25px;
+        height: 3px;
+        margin: 5px auto;
+        transition: 0.5s ease-in-out;
+        background-color: black;
+    }
+    .hamburger{
+        display: block;
+        position: absolute;
+        left: 10%;
+        top: 4rem;
+        z-index: 99;
+    }
+    .hamburger.active .bar:nth-child(2){ /* animation that makes it an x */
+        opacity: 0;
+    }
+    .hamburger.active .bar:nth-child(1){ /* animation that makes it an x */
+        transform: translateY(8px) rotate(45deg);
+        background-color: white;
+    }
+    .hamburger.active .bar:nth-child(3){ /* animation that makes it an x */
+        transform: translateY(-8px) rotate(-45deg);
+        background-color: white;
+    }
+        .nav-menu{
+        display: none;
+        position: absolute;
+        margin: 0;
+        top: 11%;
+        gap: 0;
+        flex-direction: column;
+        background-color: black;
+        opacity: 70%;
+        width: 80%;
+        height: 100vh;
+    }
+    .nav-link{
+        color: white;
+    }
+    .nav-item{
+        margin: auto;
+        width: 80%;
+        border-top: 1px solid white;
+        border-bottom: 1px solid white;
+    }
+    .nav-menu.active{
+        display: flex;
+        left: 10%;
+        padding: 0;
+    }
+    ul{
+        padding-top: 15px;
+        display: flex;
+        flex-direction: column;
+        list-style: none;
+        margin: 30px;
+        gap: 55px;
+        flex-wrap: wrap;
+        font-size: 1.1rem;
+    }
+    li{
+        word-spacing: 50px;
+    }
+
+    /* MAIN */
+    
+    #faculties{
+        display: none;
+    }
+
+    .facultiesm{
+        display: flex;
+        flex-direction: row;
+        padding-top: 5rem;
+        text-align: center;
+        font-size: 8px;
+    }
+    .f_img{
+        width: 70%;
+    }
+
+
+    /* FACULTY PAGE */
+    .f_text{
+        font-size: 110%;
+    }
+    .Faculty{
+        font-size: 50%;
+    }
+    .fac_img{
+        width: 80%;
+        height: 80%;
+    }
+    .Container h2{
+        font-size: 0.7em;
+    }
+
+
+    /* EVENTS */
+    
+    .section_title{ /* is shared with news section */
+        text-align: center;
+        margin-top: 6rem;
+        margin-bottom: 0.5rem;
+        font-size: 1.5rem;
+    }
+    #events{
+        display: flex;
+        justify-content: center;
+    }
+    #EventCon{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        background-color: gray;
+    }
+    .event_img{
+        width: 100%;
+        height: 65%;
+    }
+    .event_title{
+        font-size: 1em;
+    }
+    .event_desc{
+        margin-top: 10px;
+        font-size: 1em;
+    }
+    #All{
+        text-align: center;
+        margin-top: 3rem;
+    }
+
+/* NEWS */
+
+#NewsCon{
+    display: flex;
+    flex-direction: column;
+    gap: 1.5em;
+    justify-content: center;
+    align-items: center;
+}
+.news_con{
+    max-width: 50vw;
+    min-height: 35vh;
+    /* overflow-x: hidden; /* makes a scroll bar if text is too big, not needed anymore, fixed with "min-height: 35vh" (instead of max-height) */
+}
+.news_title{
+    margin: 15px;
+    font-size: 20px;
+}
+.news_desc{
+    background-color: white;
+    padding: 15px;
+    font-size: 1.15em;
+}
+/* FOOTER */
+
+footer{
+    margin-top: 5rem;
+    padding-top: 5em;
+    padding-bottom: 4em;
+    background-color: #214684;
+    text-align: center;
+    color: white;
+}
+    footer #social{
+        width: 30%;
+    }
+    footer{
+        font-size: 60%;
+    }
+
+  }
